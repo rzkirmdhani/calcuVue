@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  </head>
+  <body>
+
+    <div id="app">
+      <h1>Kalkulator Sederhana</h1>
+      <div class="calculator">
+          <input v-model="input" type="text" id="display">
+          <div class="buttons">
+              <button @click="appendToInput('7')">7</button>
+              <button @click="appendToInput('8')">8</button>
+              <button @click="appendToInput('9')">9</button>
+              <button @click="appendToInput('+')">+</button>
+              <button @click="appendToInput('4')">4</button>
+              <button @click="appendToInput('5')">5</button>
+              <button @click="appendToInput('6')">6</button>
+              <button @click="appendToInput('-')">-</button>
+              <button @click="appendToInput('1')">1</button>
+              <button @click="appendToInput('2')">2</button>
+              <button @click="appendToInput('3')">3</button>
+              <button @click="appendToInput('*')">*</button>
+              <button @click="clearInput">C</button>
+              <button @click="appendToInput('0')">0</button>
+              <button @click="calculateResult">=</button>
+              <button @click="appendToInput('/')">/</button>
+          </div>
+      </div>
+      <div class="result">
+          <p>Hasil: {{ result }}</p>
+      </div>
+  </div>
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
